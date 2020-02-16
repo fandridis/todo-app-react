@@ -22,8 +22,12 @@ A simple todo app in React
 
 <br />
 
-## What is missing
+## What is missing (functionality)
 This application was made in a weekend so there's few things missing.
 - A functionality for restoring TODOs from the history would be great.
 - Allowing for multiple TODO lists (categories) customly built by the user would be great too.
-- Lastly, the codebase could use a refactor to keep some places DRY.
+
+## What is missing (codebase)
+- The redux store was made with simplicity in mind. In a larger application reducers, actions and types would be split in seperate files
+to allow for better scalability. A library like redux-thunk or sagas might be also introduced for managing async tasks.
+- Tests! A library like Jest and Enzyme or react-testing-library could be introduced to add some unit/integration/e2e testing. Testing would then become a part of the CI/CD to prevent faulty deployments.
