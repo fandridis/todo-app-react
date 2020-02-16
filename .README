@@ -1,0 +1,28 @@
+# Todo App
+
+A simple todo app in React
+
+### Live Preview: https://todo-app-gefa.netlify.com/
+
+<br />
+
+## Main technologies
+- React
+- Redux
+- Scss
+
+<br />
+
+## Helpful libraries used
+- Dayjs: To format times
+- React-icons: A bunch of free icons
+- Teeheo: A tiny library to generate random numbers,strings,uuids (personally built)
+- Fantoastic: A react library to show customizable toasts (personally built)
+
+<br />
+
+## What is missing
+This application was made in a weekend so there's few things missing.
+Firstly, a functionality for restoring TODOs from the history would be great.
+Secondly, multiple TODO lists (categories) customly built by the user would be great too.
+Lastly, the codebase could use a refactor to keep some places DRY.

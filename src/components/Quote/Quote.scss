@@ -31,13 +31,13 @@
 
   blockquote:before {
     content: '“';
-    left: -2rem;
+    left: -4rem;
     top: -2rem;
   }
 
   blockquote:after {
     content: '”';
-    right: -2rem;
+    right: -4rem;
     bottom: 1rem;
   }
 
@@ -60,6 +60,14 @@
     blockquote:before,
     blockquote:after {
       font-size: 48px;
+    }
+
+    blockquote:before {
+      left: -2rem;
+    }
+  
+    blockquote:after {
+      right: -2rem;
     }
 
     cite {
