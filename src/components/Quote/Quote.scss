@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Special+Elite');
+@import '../../styles/variables';
 
 .Quote-container {
 	font-family: 'Special Elite', cursive;
-  // background: #fffdf5;
   height: 100%;
-	color: #3f3f5a;
+	color: $greyblue;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -23,21 +23,21 @@
   blockquote:before,
   blockquote:after {
     position: absolute;
-    color: #f1efe6;
-    font-size: 8rem;
-    width: 4rem;
-    height: 4rem;
+    color: $platina;
+    font-size: 80px;
+    width: 16px;
+    height: 16px;
   }
 
   blockquote:before {
     content: '“';
-    left: -5rem;
+    left: -2rem;
     top: -2rem;
   }
 
   blockquote:after {
     content: '”';
-    right: -5rem;
+    right: -2rem;
     bottom: 1rem;
   }
 
@@ -46,5 +46,24 @@
     max-width: 400px;
     line-height: 3;
     text-align: right;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Quote-container {
+    blockquote {
+      font-size: 16px;
+      max-width: 300px;
+      line-height: 1.1;
+    }
+  
+    blockquote:before,
+    blockquote:after {
+      font-size: 48px;
+    }
+
+    cite {
+      font-size: 16px;
+    }
   }
 }

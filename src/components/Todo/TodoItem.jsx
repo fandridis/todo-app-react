@@ -140,7 +140,7 @@ function TodoItem({
   const renderViewMode = () => (
     <div className="TodoItem__details TodoItem__details--view">
       <span className="name-view">{name}</span>
-      <span className="description-view">{description}</span>
+      {description && <span className="description-view">{description}</span>}
     </div>
   );
 

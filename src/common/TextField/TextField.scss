@@ -1,6 +1,5 @@
 @import '../../styles//variables';
 
-// COMMON STYLES
 .TextField-container {
   position: relative;
   display: inline-block;
@@ -67,6 +66,14 @@
     .TextField {
       border-bottom: 1px solid $green;
     }
+  }
+}
 
+@media screen and (max-width: 600px) {
+  .TextField-container {
+    .TextField {
+      padding: 8px 12px;
+      font-size: 24px;
+    }
   }
 }

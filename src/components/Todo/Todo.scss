@@ -121,3 +121,41 @@
     }
   }
 }
+
+
+@media screen and (max-width: 600px) {
+  .TodoList {
+    height: 90%;
+    width: 100%;
+    min-width: 360px;
+    margin-top: 64px;
+  
+    &__list-container {
+      padding: 20px 8px;
+    }
+  
+    &__footer-container {
+      padding: 20px;
+    }
+  }
+  
+  .TodoItem {
+    &__details {
+      padding: 6px 6px 6px 12px;
+      display: flex;
+      flex-direction: column;
+  
+      &--view {
+        .name-view {
+          font-size: 20px;
+        }
+
+      }
+      &--edit {
+        .name-edit {
+          font-size: 20px;
+        }
+      }
+    }
+  }  
+}
