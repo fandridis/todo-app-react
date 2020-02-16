@@ -25,7 +25,7 @@ function ActionHistoryItem({ message, timestamp, action }) {
 ActionHistoryItem.propTypes = {
   action: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
-  timestamp: PropTypes.instanceOf(Date).isRequired,
+  timestamp: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]).isRequired,
 };
 
 ActionHistoryItem.defaultProps = {
