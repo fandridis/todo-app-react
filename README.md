@@ -14,6 +14,7 @@ A simple todo app in React
 <br />
 
 ## Helpful libraries used
+- Redux-persist: To save the store in localstorage and rehydrate the app on browser refresh
 - Dayjs: To format times
 - React-icons: A bunch of free icons
 - Teeheo: A tiny library to generate random numbers,strings,uuids (personally built)
@@ -23,6 +24,6 @@ A simple todo app in React
 
 ## What is missing
 This application was made in a weekend so there's few things missing.
-Firstly, a functionality for restoring TODOs from the history would be great.
-Secondly, multiple TODO lists (categories) customly built by the user would be great too.
-Lastly, the codebase could use a refactor to keep some places DRY.
+- A functionality for restoring TODOs from the history would be great.
+- Allowing for multiple TODO lists (categories) customly built by the user would be great too.
+- Lastly, the codebase could use a refactor to keep some places DRY.
