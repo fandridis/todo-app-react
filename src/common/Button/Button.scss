@@ -1,0 +1,94 @@
+@import '../../styles//variables';
+
+
+
+/*---------------------------------------------------
+* Button Base
+*---------------------------------------------------*/
+.Btn {
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  vertical-align: middle;
+  white-space: nowrap;
+  outline: none;
+  transition: all 150ms ease-in;
+
+  &--small {
+    padding: 4px 16px;
+  }
+  &--large {
+    padding: 14px 24px;
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  &.Btn--text {
+    background: none;
+    color: $blue;
+  }
+}
+
+
+
+/*---------------------------------------------------
+* Primary button
+*---------------------------------------------------*/
+.Btn--primary {
+  background: $blue;
+  color: $white;
+
+  &:hover {
+    background: lighten($blue, 5%);
+  }
+  &:active {
+    background: darken($blue, 10%) !important;
+  }
+  &:focus:not(.disabled) {
+    background: lighten($blue, 5%);
+  }
+
+  &.Btn--text:hover {
+    color: $white;
+    box-shadow: none;
+  }
+  &.Btn--text:focus {
+    color: $white;
+    box-shadow: none;
+  }
+}
+
+/*---------------------------------------------------
+* Danger button
+*---------------------------------------------------*/
+.Btn--danger {
+  background: $red;
+  color: $white;
+
+  &:hover {
+    background: lighten($red, 5%);
+  }
+  &:active {
+    background: darken($red, 10%) !important;
+  }
+  &:focus:not(.disabled) {
+    background: lighten($red, 5%);
+  }
+
+  &.Btn--text:hover {
+    color: $white;
+    box-shadow: none;
+  }
+  &.Btn--text:focus {
+    color: $white;
+    box-shadow: none;
+  }
+}

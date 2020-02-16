@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+.App {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $white;
+
+  font-size: 18px;
+  color: $black;
+  line-height: 1;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Override toast styles
+.Fantoastic {
+  font-size: 16px;
+}
+.Fantoastic-variant--primary { border-left: 8px solid $blue; }
+.Fantoastic-variant--danger { border-left: 8px solid $red; }

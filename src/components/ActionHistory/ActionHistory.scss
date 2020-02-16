@@ -1,0 +1,86 @@
+@import '../../styles//variables';
+
+.ActionHistory-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: -2px 0px 12px $platina;
+  transform: translateX(280px);
+  transition: all 200ms ease;
+
+  &--visible {
+    transform: translateX(0px);
+  }
+
+  .ActionHistory__header {
+    position: relative;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 8px $platina;
+
+    .ActionHistory__title {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .ActionHistory__list {
+    flex: 1;
+    overflow: auto;
+    padding-bottom: 24px;
+  }
+
+  .ActionHistory__footer {
+    padding: 24px;
+    box-shadow: 0 0 8px $platina;
+  }
+
+  .ActionHistory__toggle-icon {
+    position: absolute;
+    top: 16px;
+    left: -48px;
+    cursor: pointer;
+  }
+}
+
+
+.ActionHistoryItem {
+  position: relative;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    border: 1px solid $platina;
+  }
+
+  &__timestamp {
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: $greyblue;
+  }
+
+  &__message {
+    &--create { color: $blue;}
+    &--delete {color: $red}
+    &--update {color: $yellow}
+    &--complete { color: $green}
+    &--uncomplete {color: $purple}
+  }
+}

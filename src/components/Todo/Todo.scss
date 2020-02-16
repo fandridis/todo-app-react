@@ -1,0 +1,123 @@
+@import '../../styles/variables';
+
+.TodoList {
+  height: 600px;
+  width: 100%;
+  max-width: 600px;
+  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0px 2px 16px $platina;
+
+  &__text-field-container {
+    width: 100%;
+  }
+
+  &__list-container {
+    overflow-y: scroll;
+    flex: 1;
+    padding: 24px 12px;
+  }
+
+  &__footer-container {
+    padding: 24px;
+    display: flex;
+    box-shadow: 0 -2px 4px $platina;
+
+    .todos-remaining {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      color: $greyblue;
+    }
+  }
+}
+
+.TodoItem {
+  display: flex;
+  align-items: center;
+
+  margin-top: 12px;
+  padding: 12px;
+  box-shadow: 0px 2px 6px $platina;
+  outline: none;
+  transition: all 200ms ease-in;
+
+  &:hover {
+    box-shadow: 2px 2px 12px $platina;
+
+    .TodoItem__actions-container {
+      opacity: 1;
+    }
+  }
+
+  &__checkbox-container {
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__details-container {
+    flex: 1;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__details {
+    padding: 8px 8px 8px 16px;
+    display: flex;
+    flex-direction: column;
+
+    &--view {
+      .name-view {
+        font-size: 24px;
+      }
+      .description-view {
+        margin-top: 8px;
+        padding-left: 16px;
+        font-size: 16px;
+        color: $greyblue;
+      }
+    }
+    &--edit {
+      .name-edit {
+        outline: none;
+        border: none;
+        font-size: 24px;
+      }
+      .description-edit {
+        outline: none;
+        border: none;
+        margin-top: 8px;
+        padding-left: 16px;
+        font-size: 16px;
+        color: $greyblue;
+      }
+    }
+  }
+
+  &__actions-container {
+    opacity: 0;
+    padding-left: 16px;
+    transition: all 200ms ease-in;
+
+    .edit-icon, .cancel-icon {
+      color: $greyblue;
+    }
+
+    .save-icon {
+      color: $green;
+    }
+
+    .delete-icon {
+      margin-left: 4px;
+      color: $red;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import '../../styles//variables';
+
+// COMMON STYLES
+.TextField-container {
+  position: relative;
+  display: inline-block;
+
+  &.isBlock { width: 100% }
+
+  &.isEmpty {
+    .TextField-clear { display: none;}
+  }
+
+  // BASIC STYLES
+  .TextField {
+    outline: none;
+    width: 100%;
+    font-size: 32px;
+    min-height: 72px;
+    padding: 12px 16px;
+    line-height: 1;
+    transition: all 200ms ease;
+
+    &::placeholder {
+      color: $platina;
+    }
+  
+    &.withClear { padding-right: 48px; }
+  }
+  
+  .TextField-clear {
+    position: absolute;
+    top: 22px;
+    right: 8px;
+    cursor: pointer;
+    color: $greyblue;
+    transition: all 150ms ease-in;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+
+// OUTLINED VARIANT STYLES
+.TextField-container.TextField-container--outline {
+  position: relative;
+  display: inline-block;
+
+  &.isBlock { width: 100% }
+
+  .TextField {
+    border: none;
+    border-bottom: 1px solid $platina;
+  }
+
+  // HOVER STATE
+  &:not(.disabled):not(.hasError):not(.isFocused) {
+    .TextField:hover {
+      border-bottom: 1px solid $greyblue;
+    }
+  }
+
+  // FOCUS/ACTIVE STATE
+  &.isFocused {
+    .TextField {
+      border-bottom: 1px solid $green;
+    }
+
+  }
+}
