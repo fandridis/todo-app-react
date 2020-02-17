@@ -2,8 +2,7 @@ import React, { useCallback } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import teeheo from '@fandridis/teeheo';
 import TodoItem from './TodoItem';
-import TextField from '../../common/TextField/TextField';
-import Button from '../../common/Button/Button';
+import { Button, TextField } from '../../common';
 import Quote from '../Quote/Quote';
 import './Todo.scss';
 

@@ -5,8 +5,7 @@ import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
 import { useToast } from 'fantoastic';
 import ActionHistoryItem from './ActionHistoryItem';
-import Button from '../../common/Button/Button';
-import Toggle from '../../common/Toggle/Toggle';
+import { Button, Toggle } from '../../common';
 import './ActionHistory.scss';
 
 function ActionHistoryList({ isOpen, onToggle }) {

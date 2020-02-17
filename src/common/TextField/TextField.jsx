@@ -16,7 +16,6 @@ const TextFieldComponent = React.forwardRef(
       variant,
       type,
       placeholder,
-      iconName,
       isClearable,
       isBlock,
       onChange,
@@ -111,18 +110,11 @@ const TextFieldComponent = React.forwardRef(
     );
 
     const TextFieldClass = classnames('TextField', {
-      withIcon: iconName,
       withClear: isClearable,
     });
 
     return (
       <div className={TextFieldContainerClass}>
-        {iconName && (
-          <div className="TextField-icon">
-            Icon
-          </div>
-        )}
-
         <input
           ref={inputRef}
           className={TextFieldClass}
@@ -151,7 +143,6 @@ TextFieldComponent.propTypes = {
   variant: PropTypes.oneOf(['outline', 'filled']),
   type: PropTypes.string,
   placeholder: PropTypes.string,
-  iconName: PropTypes.string,
   isClearable: PropTypes.bool,
   isBlock: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -167,7 +158,6 @@ TextFieldComponent.defaultProps = {
   type: 'text',
   value: '',
   placeholder: '',
-  iconName: '',
   className: '',
   isClearable: false,
   hasError: false,
